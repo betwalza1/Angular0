@@ -1,0 +1,21 @@
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="text-light">Liste des Catégories</h2>
+      <a routerLink="/categories/ajouter" class="btn btn-outline-light">➕ Ajouter</a>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let cat of categories">
+        <div class="card categorie-card">
+          <div class="card-body">
+            <h5 class="card-title text-light">{{ cat.nom }}</h5>
+            <div class="d-flex justify-content-between mt-3">
+              <a [routerLink]="['/categories', cat.id, 'modifier']" class="btn btn-outline-warning btn-sm">Modifier</a>
+              <button (click)="supprimerCategorie(cat.id)" class="btn btn-outline-danger btn-sm">Supprimer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

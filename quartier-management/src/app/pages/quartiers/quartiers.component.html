@@ -1,0 +1,24 @@
+<div class="container py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Mes Quartiers</h2>
+      <a routerLink="/quartiers/ajouter" class="btn btn-success">Ajouter un quartier</a>
+    </div>
+  
+    <div class="row g-4">
+      <div class="col-md-4" *ngFor="let quartier of quartiers">
+        <div class="card h-100 shadow border-0 quartier-card">
+          <div class="card-body">
+            <h5 class="card-title text-primary">{{ quartier.nom }}</h5>
+            <p class="card-text"><strong>Superficie :</strong> {{ quartier.superficie }} m²</p>
+            <p class="card-text"><strong>Description :</strong> {{ quartier.description }}</p>
+          </div>
+          <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
+            <a [routerLink]="['/quartiers', quartier.id, 'modifier']" class="btn btn-outline-warning btn-sm">Modifier</a>
+            <button (click)="supprimerQuartier(quartier.id)" class="btn btn-outline-danger btn-sm ms-2">Supprimer</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

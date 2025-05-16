@@ -1,0 +1,13 @@
+<div class="container py-5">
+    <h2 class="mb-4 text-dark">Ajouter une Catégorie</h2>
+  
+    <form [formGroup]="categorieForm" (ngSubmit)="onSubmit()" class="card p-4 shadow-sm" style="background-color: #f5f5f5;">
+      <div class="mb-3">
+        <label class="form-label">Nom de la catégorie</label>
+        <input type="text" class="form-control" formControlName="nom" />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Ajouter</button>
+    </form>
+  </div>
+  

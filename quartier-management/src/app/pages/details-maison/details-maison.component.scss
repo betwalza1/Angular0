@@ -1,0 +1,17 @@
+:host {
+    display: block;
+    background-color: #efefef;
+    min-height: 100vh;
+  }
+  
+  .card {
+    border-radius: 10px;
+  
+    .list-group-item {
+      background-color: #fff;
+      border: none;
+      padding: 12px 16px;
+      font-size: 1rem;
+    }
+  }
+  

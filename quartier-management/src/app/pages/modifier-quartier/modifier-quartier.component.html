@@ -1,0 +1,23 @@
+<div class="container py-5">
+    <h2 class="mb-4">Modifier Quartier</h2>
+  
+    <form [formGroup]="quartierForm" (ngSubmit)="onSubmit()" class="card p-4 shadow-sm" style="background-color: #f5f5f5;">
+      <div class="mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" class="form-control" formControlName="nom" id="nom">
+      </div>
+  
+      <div class="mb-3">
+        <label for="superficie" class="form-label">Superficie</label>
+        <input type="number" class="form-control" formControlName="superficie" id="superficie">
+      </div>
+  
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" rows="3" formControlName="description" id="description"></textarea>
+      </div>
+  
+      <button type="submit" class="btn btn-warning">Modifier</button>
+    </form>
+  </div>
+  

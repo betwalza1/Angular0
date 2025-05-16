@@ -1,0 +1,33 @@
+<div class="container py-5">
+    <h2 class="mb-4 text-dark">Ajouter une Maison</h2>
+  
+    <form [formGroup]="maisonForm" (ngSubmit)="onSubmit()" class="card p-4 shadow-sm" style="background-color: #f8f9fa;">
+      <div class="mb-3">
+        <label class="form-label">Nom</label>
+        <input type="text" formControlName="nom" class="form-control">
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Superficie (m²)</label>
+        <input type="number" formControlName="superficie" class="form-control">
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Catégorie</label>
+        <input type="text" formControlName="categorie" class="form-control">
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Adresse</label>
+        <input type="text" formControlName="adresse" class="form-control">
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Quartier</label>
+        <input type="text" formControlName="quartier" class="form-control">
+      </div>
+  
+      <button type="submit" class="btn btn-secondary">Ajouter</button>
+    </form>
+  </div>
+  

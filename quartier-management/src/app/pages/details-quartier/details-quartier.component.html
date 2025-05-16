@@ -1,0 +1,27 @@
+<div class="container py-5">
+    <div class="mb-4">
+      <h2 class="text-primary">{{ quartier.nom }}</h2>
+      <p><strong>Superficie :</strong> {{ quartier.superficie }} m²</p>
+      <p><strong>Description :</strong> {{ quartier.description }}</p>
+    </div>
+  
+    <hr>
+  
+    <h4 class="mb-3">Maisons dans ce quartier</h4>
+  
+    <div *ngIf="maisons.length > 0; else aucun">
+      <div class="list-group">
+        <a *ngFor="let maison of maisons"
+           [routerLink]="['/maisons', maison.id]"
+           class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+          {{ maison.nom }}
+          <span class="badge bg-secondary">{{ maison.superficie }} m²</span>
+        </a>
+      </div>
+    </div>
+  
+    <ng-template #aucun>
+      <p class="text-muted">Aucune maison enregistrée.</p>
+    </ng-template>
+  </div>
+  
